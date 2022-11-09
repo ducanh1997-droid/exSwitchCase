@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài tập Switch-Case</title>
+</head>
+<body>
+<input type="text" id="inputDay">
+<button onclick="countDay()" id="submit">Tính số ngày</button>
+<br><br>
+<span>Tháng: </span><span id="month"></span><span id="day"></span>
+</body>
+<script>
+        function countDay() {
+
+            let inputDay = +document.getElementById("inputDay").value;
+            document.getElementById("month").innerText = inputDay;
+            console.log(inputDay);
+            switch (inputDay) {
+                case 2:
+                    document.getElementById("day").innerHTML = " có 28 hoặc 29 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("day").innerHTML = " có 30 ngày";
+                    break;
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("day").innerHTML = " có 31 ngày";
+                    break;
+            }
+        }
+</script>
+</html>
